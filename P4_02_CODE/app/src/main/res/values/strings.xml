@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Ma Reu</string>
+    <string name="tab_neighbour_title">My neighbours</string>
+    <string name="tab_favorites_title">Favorites</string>
+    <string name="activity_new_neighbour">New neighbour</string>
+    <string name="participants">PARTICIPANTS 1, PARTICIPANTS 2, PARTICIPANTS 3</string>
+    <string name="done">done</string>
+
+
+    <string-array name="meeting_room">
+        <item>Salle A</item>
+        <item>Salle B</item>
+        <item>Salle C</item>
+        <item>Salle D</item>
+        <item>Salle E</item>
+        <item>Salle F</item>
+        <item>Salle G</item>
+        <item>Salle H</item>
+        <item>Salle I</item>
+        <item>Salle J</item>
+
+    </string-array>
+</resources>

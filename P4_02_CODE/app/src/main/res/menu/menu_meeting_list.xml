@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/filter_menu_activity_main"
+        android:icon="@drawable/ic_action_filter"
+        android:title="filter"
+        app:showAsAction="ifRoom">
+
+        <menu>
+
+            <group>
+                <item
+                    android:checkable="false"
+                    android:enabled="false"
+                    android:title="Filtre les réunions" />
+
+                <item
+                    android:id="@+id/option_1_time"
+                    android:title="Par heure">
+
+                    <menu>
+
+                        <group
+                            android:id="@+id/option_filter_1_time"
+                            android:checkableBehavior="all">
+
+                        </group>
+                    </menu>
+                </item>
+                <item
+                    android:id="@+id/option_2_room"
+                    android:title="Par local">
+
+                    <menu>
+
+                        <group
+                            android:id="@+id/option_filter_2_room"
+                            android:checkableBehavior="all"></group>
+                    </menu>
+                </item>
+                <item
+                    android:id="@+id/option_3_init"
+                    android:title="INIT">
+
+                    <menu>
+
+                        <group
+                            android:id="@+id/option_filter_3_init"
+                            android:checkableBehavior="all"></group>
+                    </menu>
+                </item>
+            </group>
+        </menu>
+    </item>
+</menu>
+
+
