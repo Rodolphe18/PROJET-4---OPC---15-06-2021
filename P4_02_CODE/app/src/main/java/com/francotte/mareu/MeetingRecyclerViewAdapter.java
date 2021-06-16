@@ -13,6 +13,7 @@ import com.francotte.mareu.events.DeleteMeetingEvent;
 import com.francotte.mareu.model.Meeting;
 
 import org.greenrobot.eventbus.EventBus;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -27,6 +28,7 @@ public class MeetingRecyclerViewAdapter extends RecyclerView.Adapter<MeetingRecy
         mMeetings = items;
     }
 
+    @NotNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
@@ -38,7 +40,7 @@ public class MeetingRecyclerViewAdapter extends RecyclerView.Adapter<MeetingRecy
     public void onBindViewHolder(final ViewHolder holder, int position) {
         Meeting meeting = mMeetings.get(position);
         holder.mItemListReunion.setText(meeting.getSubject() + " - " + meeting.getStartHourOfMeeting() + "H" + meeting.getStartMinutesOfMeeting() + " - " + meeting.getMeetingRoom());
-        holder.mItemListParticipants.setText(meeting.getParticipants().substring(0, 27) + " ...");
+        holder.mItemListParticipants.setText(meeting.getParticipants());
 
 
         holder.mDeleteButton.setOnClickListener(new View.OnClickListener() {

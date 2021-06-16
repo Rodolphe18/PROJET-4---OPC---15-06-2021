@@ -5,7 +5,7 @@
     <item
         android:id="@+id/filter_menu_activity_main"
         android:icon="@drawable/ic_action_filter"
-        android:title="filter"
+        android:title="@string/filter"
         app:showAsAction="ifRoom">
 
         <menu>
@@ -14,11 +14,11 @@
                 <item
                     android:checkable="false"
                     android:enabled="false"
-                    android:title="Filtre les réunions" />
+                    android:title="@string/filtre_les_r_unions" />
 
                 <item
                     android:id="@+id/option_1_time"
-                    android:title="Par heure">
+                    android:title="@string/par_heure">
 
                     <menu>
 
@@ -31,24 +31,24 @@
                 </item>
                 <item
                     android:id="@+id/option_2_room"
-                    android:title="Par local">
+                    android:title="@string/par_local">
 
                     <menu>
 
                         <group
                             android:id="@+id/option_filter_2_room"
-                            android:checkableBehavior="all"></group>
+                            android:checkableBehavior="all" />
                     </menu>
                 </item>
                 <item
                     android:id="@+id/option_3_init"
-                    android:title="INIT">
+                    android:title="@string/init">
 
                     <menu>
 
                         <group
                             android:id="@+id/option_filter_3_init"
-                            android:checkableBehavior="all"></group>
+                            android:checkableBehavior="all" />
                     </menu>
                 </item>
             </group>

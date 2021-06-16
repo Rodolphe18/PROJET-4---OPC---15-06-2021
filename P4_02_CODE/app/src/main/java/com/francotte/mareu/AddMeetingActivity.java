@@ -3,10 +3,7 @@ package com.francotte.mareu;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -42,9 +39,7 @@ public class AddMeetingActivity extends AppCompatActivity {
     @BindView(R.id.timePicker)
     TimePicker timePicker;
 
-
     private MeetingApiService mApiService;
-    private DatePicker mDatePicker;
     private int mHeures = 0;
     private int mMinutes = 0;
 
@@ -58,7 +53,6 @@ public class AddMeetingActivity extends AppCompatActivity {
         init();
 
         timePicker.setIs24HourView(true);
-        // 24H Mode.
         this.timePicker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
             @Override
             public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
@@ -67,33 +61,12 @@ public class AddMeetingActivity extends AppCompatActivity {
             }
         });
 
-
         mArrowBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
             }
-
         });
-
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu pMenu) {
-        getMenuInflater().inflate(R.menu.menu_meeting_list, pMenu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home: {
-                finish();
-                return true;
-            }
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     private void init() {
@@ -111,7 +84,6 @@ public class AddMeetingActivity extends AppCompatActivity {
                 addButton.setEnabled(s.length() > 0);
             }
         });
-
     }
 
     @OnClick(R.id.create)
@@ -121,13 +93,11 @@ public class AddMeetingActivity extends AppCompatActivity {
                 objectInput.getEditText().getText().toString(),
                 participantsInput.getEditText().getText().toString(),
                 roomInput.getSelectedItem().toString(),
-                mHeures, mMinutes
-        );
+                mHeures,
+                mMinutes);
         mApiService.createMeeting(meeting);
         finish();
     }
-
-
 }
 
 

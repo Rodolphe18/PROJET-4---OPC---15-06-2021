@@ -1,20 +1,14 @@
 package com.francotte.mareu;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.MenuInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.francotte.mareu.DI.DI;
 import com.francotte.mareu.dialog_filter.RoomDialog;
@@ -43,10 +37,8 @@ public class ListMeetingActivity extends AppCompatActivity implements RoomDialog
     @BindView(R.id.recyclerview)
     RecyclerView mRecyclerView;
 
-
     private MeetingApiService mApiService;
     private List<Meeting> mMeetings;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,15 +46,12 @@ public class ListMeetingActivity extends AppCompatActivity implements RoomDialog
         setContentView(R.layout.activity_meeting_list);
         ButterKnife.bind(this);
 
-
         mApiService = DI.getMeetingApiService();
         this.configureRecyclerView();
-        mFloatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), AddMeetingActivity.class);
-                startActivity(intent);
-            }
+
+        mFloatingActionButton.setOnClickListener(view -> {
+            Intent intent = new Intent(getApplicationContext(), AddMeetingActivity.class);
+            startActivity(intent);
         });
     }
 
@@ -87,19 +76,6 @@ public class ListMeetingActivity extends AppCompatActivity implements RoomDialog
             default:
                 return super.onOptionsItemSelected(pItem);
         }
-    }
-
-    ;
-
-
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.activity_recyclerview, container, false);
-        Context context = view.getContext();
-        mRecyclerView = (RecyclerView) view;
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(context));
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(getApplicationContext(), DividerItemDecoration.VERTICAL));
-        return view;
     }
 
 
@@ -131,11 +107,7 @@ public class ListMeetingActivity extends AppCompatActivity implements RoomDialog
         EventBus.getDefault().unregister(this);
     }
 
-    /**
-     * Fired if the user clicks on a delete button
-     *
-     * @param event
-     */
+
     @Subscribe
     public void onDeleteNeighbour(DeleteMeetingEvent event) {
         mApiService.deleteMeeting(event.mMeeting);

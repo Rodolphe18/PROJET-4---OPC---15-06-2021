@@ -1,10 +1,24 @@
 <resources>
-    <string name="app_name">Ma Reu</string>
+    <string name="app_name">Ma réu</string>
     <string name="tab_neighbour_title">My neighbours</string>
     <string name="tab_favorites_title">Favorites</string>
     <string name="activity_new_neighbour">New neighbour</string>
     <string name="participants">PARTICIPANTS 1, PARTICIPANTS 2, PARTICIPANTS 3</string>
     <string name="done">done</string>
+    <string name="sujet_heure_salle">SUJET - HEURE - SALLE</string>
+    <string name="supprimer">SUPPRIMER</string>
+    <string name="etat_de_la_reunion">ETAT DE LA REUNION</string>
+    <string name="nouvelle_reunion">NOUVELLE REUNION</string>
+    <string name="objet_de_la_réunion">Objet de la réunion</string>
+    <string name="participant">Participants</string>
+    <string name="enregistrer">Enregistrer</string>
+    <string name="retour_arriere">RETOUR ARRIERE</string>
+    <string name="ajouter_une_reunion">AJOUTER UNE REUNION</string>
+    <string name="init">INIT</string>
+    <string name="par_local">Par local</string>
+    <string name="par_heure">Par heure</string>
+    <string name="filtre_les_r_unions">Filtre les réunions</string>
+    <string name="filter">filter</string>
 
 
     <string-array name="meeting_room">

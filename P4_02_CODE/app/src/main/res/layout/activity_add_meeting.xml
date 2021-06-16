@@ -23,8 +23,8 @@
                 android:id="@+id/add_meeting_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="NOUVELLE REUNION"
-                android:textSize="23dp"
+                android:text="@string/nouvelle_reunion"
+                android:textSize="23sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:layout_marginTop="50dp"
@@ -44,7 +44,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Objet de la réunion" />
+                    android:hint="@string/objet_de_la_réunion" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -59,7 +59,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Participants" />
+                    android:hint="@string/participant" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Spinner
@@ -93,7 +93,7 @@
                 android:backgroundTint="@color/azur"
                 android:enabled="false"
                 android:hint="@string/appbar_scrolling_view_behavior"
-                android:text="Enregistrer"
+                android:text="@string/enregistrer"
                 android:textColor="@color/white"
                 app:cornerRadius="20dp" />
 
@@ -110,6 +110,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
-        android:padding="5dp" />
+        android:padding="5dp"
+        android:contentDescription="@string/retour_arriere" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

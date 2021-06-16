@@ -19,7 +19,7 @@ public class DummyMeetingGenerator {
                     15, 45),
             new Meeting(3, "pot d'arrivée'", "jean@lamzone.com , jack@lamzone.com", "Salle J",
                     17, 15),
-            new Meeting(4, "point hebdomadaire", "jean@lamzone.com , jack@lamzone.com", "Salle B",
+            new Meeting(4, "point hebdo", "jean@lamzone.com , jack@lamzone.com", "Salle B",
                     9, 30),
             new Meeting(5, "plénière", "jean@lamzone.com , jack@lamzone.com", "Salle F",
                     11, 30));

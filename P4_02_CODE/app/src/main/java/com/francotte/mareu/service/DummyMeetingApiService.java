@@ -10,7 +10,7 @@ import java.util.List;
 
 public class DummyMeetingApiService implements MeetingApiService {
 
-    private List<Meeting> mMeetings = com.francotte.mareu.service.DummyMeetingGenerator.generateMeetings();
+    private List<Meeting> mMeetings = DummyMeetingGenerator.generateMeetings();
     private List<Meeting> mMeetingFilterList;
 
     @Override
